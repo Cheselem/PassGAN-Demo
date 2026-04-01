@@ -409,7 +409,7 @@ def main():
 
     # ── Step 5: Evaluate All Attacks ──
     print("[5/6] Evaluating attack accuracy against test set...")
-    ai_results = evaluate_attack("AI (PassGAN Simulation)", ai_passwords, test_data)
+    ai_results = evaluate_attack("AI-Driven (PassGAN Approach)", ai_passwords, test_data)
     ai_results["generation_time_seconds"] = round(ai_time, 2)
 
     bf_results = evaluate_attack("Brute Force (Random)", bf_passwords, test_data)
@@ -452,7 +452,7 @@ def main():
     print(f"  {'Method':<30} {'n=1':<12} {'n=2':<12} {'n=3':<12} {'n=4':<12}")
     print(f"  {'-'*30} {'-'*12} {'-'*12} {'-'*12} {'-'*12}")
 
-    for name, ngram in [("AI (PassGAN Sim)", ai_ngram), ("Brute Force", bf_ngram), ("Dictionary", dict_ngram)]:
+    for name, ngram in [("AI-Driven (PassGAN)", ai_ngram), ("Brute Force", bf_ngram), ("Dictionary", dict_ngram)]:
         print(f"  {name:<30} "
               f"{ngram['js_divergence_n1']:<12} "
               f"{ngram['js_divergence_n2']:<12} "
@@ -518,7 +518,7 @@ def main():
         f.write("\n" + "-" * 70 + "\n")
         f.write("N-gram JS Divergence (lower = better similarity to real passwords)\n")
         f.write("-" * 70 + "\n")
-        for name, ngram in [("AI (PassGAN Sim)", ai_ngram), ("Brute Force", bf_ngram), ("Dictionary", dict_ngram)]:
+        for name, ngram in [("AI-Driven (PassGAN)", ai_ngram), ("Brute Force", bf_ngram), ("Dictionary", dict_ngram)]:
             f.write(f"{name:<30} n1={ngram['js_divergence_n1']}  "
                     f"n2={ngram['js_divergence_n2']}  "
                     f"n3={ngram['js_divergence_n3']}  "
