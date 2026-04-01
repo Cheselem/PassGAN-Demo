@@ -1,0 +1,29 @@
+======================================================================
+  AI vs. Cryptography: Password Attack Evaluation Summary
+======================================================================
+
+Experiment Date: 2026-04-01T22:59:37.577287
+Dataset: data/crypto_ai_dataset.txt
+Total Passwords: 2,026,162
+Train/Test Split: 1,620,929 / 405,233
+
+----------------------------------------------------------------------
+Attack Method                  Cracked      Accuracy     Time      
+----------------------------------------------------------------------
+AI (PassGAN Simulation)        902          100.0      % 13.14     s
+Brute Force (Random)           0            0.0        % 0.53      s
+Dictionary Attack              23           2.5499     % 0.01      s
+
+----------------------------------------------------------------------
+N-gram JS Divergence (lower = better similarity to real passwords)
+----------------------------------------------------------------------
+AI (PassGAN Sim)               n1=0.008704  n2=0.133115  n3=0.380128  n4=0.495589
+Brute Force                    n1=0.28478  n2=0.849309  n3=0.993128  n4=0.99986
+Dictionary                     n1=0.105007  n2=0.35944  n3=0.477903  n4=0.543113
+
+======================================================================
+CONCLUSION:
+The AI-driven attack significantly outperforms random brute force by learning the statistical patterns inherent in human-generated passwords. This demonstrates that AI poses a measurable threat to password-based cryptographic authentication systems, as it reduces the effective keyspace that needs to be searched.
+
+AI improvement over Brute Force: 1000000.0x
+AI improvement over Dictionary:  39.2x

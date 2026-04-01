@@ -4,3 +4,6 @@ data/*.txt
 *.pyc
 *.pkl
 .ipynb_checkpoints
+__pycache__/
+output/evaluation/samples/
+output/evaluation/test_set.txt
